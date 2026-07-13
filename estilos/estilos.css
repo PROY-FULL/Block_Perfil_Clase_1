@@ -1,0 +1,88 @@
+/*Estilos son generales*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #333333;
+  margin: 0;
+  padding: 20px;
+}
+/*Estilos para el contenedor principal
+ (para que no ocupe toda la pantalla)*/
+
+main,
+header,
+footer {
+  max-width: 600px; /*ancho maximo de la pagina*/
+  margin: 20px auto;
+  background-color: #ffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+header {
+  text-align: center;
+}
+
+nav a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-decoration: underline; /*El subrayado solo aparece al pasar el mause*/
+}
+
+section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+/*Estilos para la imagen*/
+img {
+  display: block; /*Esto nos permite centrar la imagen*/
+  margin: 15px auto;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+}
+
+/*Estilos del formulario*/
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/*.cajageneral {
+  color: red;
+  background-color: bisque;
+  font-size: 40px;
+  padding-left: 30px;
+  margin-left: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#caja2 {
+  color: rgb(174, 20, 46);
+  font-size: 60px;
+}
+
+.box {
+  background-color: black;
+  margin-top: 20px;
+  width: 250px;
+  height: 60px;
+  box-shadow: 100px 10px 6px 0px blue;
+}
+*/
