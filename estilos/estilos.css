@@ -62,7 +62,31 @@ button {
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
 }
+
+button {
+  background-color: #28a745;
+  color: #ffff;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer; /*Cambiar el cursor al pasar por encima del boton*/
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  background: none;
+  box-shadow: none;
+}
+
 /*.cajageneral {
   color: red;
   background-color: bisque;
