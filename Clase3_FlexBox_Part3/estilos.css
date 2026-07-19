@@ -1,0 +1,19 @@
+.barraBusquedas {
+  display: flex;
+  gap: 10px; /*Deja un espacio de 10px o el que necesitemos en este caso es entre el input y el boton*/
+  background-color: white;
+  padding: 10px;
+}
+
+input {
+  flex: 1; /*Sirve para decirle a un elemento hijo que ocupe todo el espacio sobrante dentro de su contendor padre*/
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3598db;
+  color: white;
+  border: none;
+}

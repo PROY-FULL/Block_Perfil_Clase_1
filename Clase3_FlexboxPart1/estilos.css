@@ -1,0 +1,26 @@
+.repisa {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.libro {
+  width: 80px;
+  height: 80px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+.rojo {
+  background-color: red;
+}
+
+.azul {
+  background-color: #3498db;
+}
+
+.verde {
+  background-color: #2ecc71;
+}

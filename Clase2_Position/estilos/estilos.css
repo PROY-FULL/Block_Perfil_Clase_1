@@ -1,0 +1,38 @@
+.contenedor {
+  border: 5px solid indigo;
+  width: 600px;
+  height: 300px;
+  margin: 20px;
+}
+
+.padre {
+  border: 5px solid steelblue;
+  width: 300px;
+  height: 150px;
+  margin: 50px;
+  position: relative;
+}
+
+.hijo {
+  width: 50px;
+  height: 50px;
+  background: red;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+/*.boxContenedor {
+  width: 300px;
+  height: 300px;
+  background: red;
+}
+
+.boxHijo {
+  width: 100px;
+  height: 100px;
+  background: pink;
+  position: relative;
+  top: 30px;
+  left: 100px;
+}
+*/
