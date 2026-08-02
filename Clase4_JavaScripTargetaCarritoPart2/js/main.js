@@ -4,6 +4,24 @@ const carrito = [
   { nombre: "Teclado Mecánico", precio: 80 },
 ];
 /*
+DESCOMENTAR PARA HACER PRUEBAS DE METODOS
+Aviso("Mi primera funcion llamadco");
+
+let valor = 0;
+
+let suma = Sumar(6, 7);
+
+alert(suma);
+
+function Aviso(caneda) {
+  alert(caneda);
+}
+
+function Sumar(valor1, valor2) {
+  let sumar = valor1 + valor2;
+  return sumar;
+}*/
+/*
 carrito[0];
 carrito[1];
 carrito[2];*/
