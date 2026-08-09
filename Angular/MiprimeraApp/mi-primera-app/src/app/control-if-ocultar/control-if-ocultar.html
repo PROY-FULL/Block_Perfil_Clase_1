@@ -1,0 +1,9 @@
+<h1>control-if-ocultar works!</h1>
+<button type="button" class="btn btn-primary" (click)="ocultarBoton()">
+  {{ ocultar == true ? 'Mostrar' : 'Ocultar' }}
+</button>
+@if (ocultar == true) {
+  <div class="alert alert-success" role="alert">A simple success alert—check it out!</div>
+} @else {
+  <div class="alert alert-danger" role="alert">A simple danger alert—check it out!</div>
+}

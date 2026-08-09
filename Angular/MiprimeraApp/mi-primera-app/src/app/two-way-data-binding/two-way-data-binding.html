@@ -1,0 +1,12 @@
+<h1>Two Way Data Binding!</h1>
+<div class="mb-3">
+  <label for="InputNombre" class="form-label">Escribe tu Nombre</label>
+  <input
+    type="text"
+    class="form-control"
+    id="InputNombre"
+    placeholder="Escribe un nombre"
+    [(ngModel)]="nombre"
+  />
+</div>
+<p>Hola, {{ nombre }} que bueno verte aqui!!</p>

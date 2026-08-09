@@ -1,0 +1,10 @@
+<h1>Control de Flujo @If y @For</h1>
+<ul class="list-group">
+  @for (materia of materias; track materia) {
+    @if (materia == 'Matematicas') {
+      <li class="list-group-item active" aria-current="true">{{ materia }}</li>
+    } @else {
+      <li class="list-group-item">{{ materia }}</li>
+    }
+  }
+</ul>
