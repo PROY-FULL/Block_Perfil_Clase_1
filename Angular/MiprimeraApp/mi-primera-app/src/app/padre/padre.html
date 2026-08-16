@@ -1,0 +1,6 @@
+<p>Componente Padre</p>
+<h2>Panel Principal</h2>
+
+<!--<app-hijo [nombreUsuario]="miInvitado"></app-hijo>-->
+<app-hijo (alHacerClick)="recibirMensaje($event)"></app-hijo>
+<p>Mensaje del Hijo {{ mensajeRecibido }}</p>

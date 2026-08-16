@@ -1,0 +1,30 @@
+<h1>Semaforo Escolar</h1>
+<p class="text-uppercase">La luz actual es: {{ luzActual }}</p>
+@for (color of coloresDisponibles; track color) {
+  @if (color == 'rojo') {
+    <button type="button" (click)="cambiarLuz(color)" class="btn btn-danger mx-2">Danger</button>
+  }
+  @if (color == 'amarillo') {
+    <button type="button" (click)="cambiarLuz(color)" class="btn btn-warning mx2">Warning</button>
+  }
+  @if (color == 'verde') {
+    <button type="button" (click)="cambiarLuz(color)" class="btn btn-success mx-2">Success</button>
+  }
+}
+<hr />
+
+<div class="container">
+  @if (luzActual == 'rojo') {
+    <div class="alert alert-danger" role="alert">🔴 ¡Alto! No se puede Avanzar.</div>
+    <!--emogin rojo-->
+  }
+
+  @if (luzActual == 'amarillo') {
+    <div class="alert alert-warning" role="alert">⚠️ Precaución , baje la velocidad</div>
+    <!--emogin advertencia-->
+  }
+  @if (luzActual == 'verde') {
+    <div class="alert alert-success" role="alert">✅ ¡Adelante, cruce con cuidado!</div>
+    <!--emogin marca-->
+  }
+</div>

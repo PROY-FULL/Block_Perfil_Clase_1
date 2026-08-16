@@ -1,0 +1,30 @@
+<h5 class="text-success mt-3">Agregar Nuevo Producto</h5>
+<form (submit)="agregarProducto($event)">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Descripcion</label>
+
+    <input
+      type="text"
+      id="descripcion"
+      name="descripcion"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Descripcion del producto"
+      [(ngModel)]="descripcion"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">producto</label>
+
+    <input
+      type="number"
+      id="precio"
+      name="precio"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Precio del producto"
+      [(ngModel)]="precionInput"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Agregar</button>
+</form>

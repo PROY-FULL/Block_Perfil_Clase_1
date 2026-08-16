@@ -1,0 +1,25 @@
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">operador A</label>
+  <input
+    [(ngModel)]="operadorA"
+    type="number"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="operadorA"
+  />
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Operador B</label>
+  <input
+    [(ngModel)]="operadorB"
+    type="number"
+    class="form-control"
+    id="exampleFormControlInput1"
+    placeholder="operadorA"
+  />
+</div>
+<button type="button" (click)="Sumar()" class="btn btn-primary mx-2">Sumar</button>
+<button type="button" (click)="Restar()" class="btn btn-primary mx-2">Restar</button>
+<button type="button" (click)="Limpiar()" class="btn btn-primary mx-2">Limpiar</button>
+
+<div class="alert alert-success mt-5" role="alert">Resultado: {{ resultado }}</div>
