@@ -1,0 +1,9 @@
+<div class="container">
+  <h3>Listado de Productos</h3>
+  <ul class="list-group w-50 mx-auto">
+    @for (producto of productos; track producto) {
+      <app-productos [producto]="producto"></app-productos>
+    }
+  </ul>
+  <app-formulario></app-formulario>
+</div>
