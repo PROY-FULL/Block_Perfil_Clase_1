@@ -1,0 +1,10 @@
+--Esto es un comentario y no se toma encuenta
+/*
+Esto es un comentario de doble linea
+*/
+
+CREATE TABLE Especialidades(
+IdEspecialidad INT IDENTITY(1,1) PRIMARY KEY,
+NombreEspecialidad VARCHAR(150),
+Descripcion VARCHAR(200),
+Activo BIT)

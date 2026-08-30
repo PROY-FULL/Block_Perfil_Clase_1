@@ -1,11 +1,36 @@
-.example-spacer {
-  flex: 1 1 auto;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-.mat-toolbar {
-  background: rgb(31, 33, 182);
-  color: white;
+.app-sidenav {
+  width: 200px;
+  border-radius: 0px !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-mat-icon {
+.mat-drawer {
+  background-color: rgb(31, 33, 182);
+}
+
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.text-white {
   color: white;
+}
+.app-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+
+.sidenav-container {
+  flex: 1;
+}
+
+a:hover {
+  --bs-link-color-rgb: red !important; /*corregir no se reconoce el hover*/
 }

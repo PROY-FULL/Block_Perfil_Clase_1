@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.spacer {
+  flex: 1 1 auto;
+}
+.mat-toolbar {
+  background: rgb(31, 33, 182) !important;
+  color: white !important;
+}
+
+mat-icon {
+  color: white !important;
+}
