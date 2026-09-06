@@ -31,6 +31,20 @@
   flex: 1;
 }
 
-a:hover {
-  --bs-link-color-rgb: red !important; /*corregir no se reconoce el hover*/
+.app-sidenav mat-nav-list a[mat-list-item]:hover {
+  background-color: #2023ce; /* Opcional: un fondo semitransparente sutil */
+}
+
+.app-sidenav mat-nav-list a[mat-list-item]:hover .text-white,
+.app-sidenav mat-nav-list a[mat-list-item]:hover mat-icon {
+  color: white !important;
+}
+
+.app-sidenav mat-nav-list a[mat-list-item]:active .text-white,
+.app-sidenav mat-nav-list a[mat-list-item]:active mat-icon,
+.app-sidenav mat-nav-list a[mat-list-item]:focus .text-white,
+.app-sidenav mat-nav-list a[mat-list-item]:focus mat-icon,
+.app-sidenav mat-nav-list a[mat-list-item].cdk-program-focused .text-white,
+.app-sidenav mat-nav-list a[mat-list-item].cdk-program-focused mat-icon {
+  color: white !important;
 }
