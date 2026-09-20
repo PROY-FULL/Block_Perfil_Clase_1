@@ -1,0 +1,7 @@
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Gramatica\bin\Debug\Gramatica.exe.config
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Gramatica\bin\Debug\Gramatica.exe
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Gramatica\bin\Debug\Gramatica.pdb
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Gramatica\obj\Debug\Gramatica.csproj.AssemblyReference.cache
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Gramatica\obj\Debug\Gramatica.csproj.CoreCompileInputs.cache
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Gramatica\obj\Debug\Gramatica.exe
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Gramatica\obj\Debug\Gramatica.pdb

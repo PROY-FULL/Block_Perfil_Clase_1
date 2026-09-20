@@ -1,0 +1,7 @@
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Proyectos\bin\Debug\Proyectos.exe.config
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Proyectos\bin\Debug\Proyectos.exe
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Proyectos\bin\Debug\Proyectos.pdb
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Proyectos\obj\Debug\Proyectos.csproj.AssemblyReference.cache
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Proyectos\obj\Debug\Proyectos.csproj.CoreCompileInputs.cache
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Proyectos\obj\Debug\Proyectos.exe
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Proyectos\obj\Debug\Proyectos.pdb

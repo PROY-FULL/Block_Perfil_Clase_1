@@ -1,0 +1,7 @@
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\MetodosFunciones\bin\Debug\MetodosFunciones.exe.config
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\MetodosFunciones\bin\Debug\MetodosFunciones.exe
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\MetodosFunciones\bin\Debug\MetodosFunciones.pdb
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\MetodosFunciones\obj\Debug\MetodosFunciones.csproj.AssemblyReference.cache
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\MetodosFunciones\obj\Debug\MetodosFunciones.csproj.CoreCompileInputs.cache
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\MetodosFunciones\obj\Debug\MetodosFunciones.exe
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\MetodosFunciones\obj\Debug\MetodosFunciones.pdb

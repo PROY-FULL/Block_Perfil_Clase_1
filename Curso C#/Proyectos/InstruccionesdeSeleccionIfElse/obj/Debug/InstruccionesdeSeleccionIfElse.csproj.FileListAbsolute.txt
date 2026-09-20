@@ -1,0 +1,7 @@
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\InstruccionesdeSeleccionIfElse\bin\Debug\InstruccionesdeSeleccionIfElse.exe.config
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\InstruccionesdeSeleccionIfElse\bin\Debug\InstruccionesdeSeleccionIfElse.exe
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\InstruccionesdeSeleccionIfElse\bin\Debug\InstruccionesdeSeleccionIfElse.pdb
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\InstruccionesdeSeleccionIfElse\obj\Debug\InstruccionesdeSeleccionIfElse.csproj.AssemblyReference.cache
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\InstruccionesdeSeleccionIfElse\obj\Debug\InstruccionesdeSeleccionIfElse.csproj.CoreCompileInputs.cache
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\InstruccionesdeSeleccionIfElse\obj\Debug\InstruccionesdeSeleccionIfElse.exe
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\InstruccionesdeSeleccionIfElse\obj\Debug\InstruccionesdeSeleccionIfElse.pdb

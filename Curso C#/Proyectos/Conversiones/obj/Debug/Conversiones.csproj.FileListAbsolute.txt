@@ -1,0 +1,7 @@
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Conversiones\bin\Debug\Conversiones.exe.config
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Conversiones\bin\Debug\Conversiones.exe
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Conversiones\bin\Debug\Conversiones.pdb
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Conversiones\obj\Debug\Conversiones.csproj.AssemblyReference.cache
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Conversiones\obj\Debug\Conversiones.csproj.CoreCompileInputs.cache
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Conversiones\obj\Debug\Conversiones.exe
+C:\Users\fabit\Desktop\CURSO_FULLSTACK\CLASE_1\Curso C#\Proyectos\Conversiones\obj\Debug\Conversiones.pdb

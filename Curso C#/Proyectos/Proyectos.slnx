@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="ArrayoMatrices/ArrayoMatrices.csproj" />
+  <Project Path="Ciclos/Ciclos.csproj" />
+  <Project Path="Conversiones/Conversiones.csproj" />
+  <Project Path="Ejercicios/Ejercicios.csproj" />
+  <Project Path="Gramatica/Gramatica.csproj" />
+  <Project Path="InstruccionesdeSeleccionIfElse/InstruccionesdeSeleccionIfElse.csproj" />
+  <Project Path="MetodosFunciones/MetodosFunciones.csproj" />
+  <Project Path="Proyectos/Proyectos.csproj" />
+</Solution>
