@@ -1,10 +1,10 @@
 <Solution>
-  <Project Path="ArrayoMatrices/ArrayoMatrices.csproj" />
-  <Project Path="Ciclos/Ciclos.csproj" />
-  <Project Path="Conversiones/Conversiones.csproj" />
-  <Project Path="Ejercicios/Ejercicios.csproj" />
-  <Project Path="Gramatica/Gramatica.csproj" />
-  <Project Path="InstruccionesdeSeleccionIfElse/InstruccionesdeSeleccionIfElse.csproj" />
-  <Project Path="MetodosFunciones/MetodosFunciones.csproj" />
-  <Project Path="Proyectos/Proyectos.csproj" />
+  <Project Path="ArrayoMatrices/ArrayoMatrices.csproj" Id="a12309d9-8366-4395-80e5-273fa54a0a4c" />
+  <Project Path="Ciclos/Ciclos.csproj" Id="82dad1c9-4a05-4b5f-9002-514012249469" />
+  <Project Path="Conversiones/Conversiones.csproj" Id="2a750402-feff-46c4-896e-33f4aa9a0cba" />
+  <Project Path="Ejercicios/Ejercicios.csproj" Id="3cced5de-263e-46e2-a2ea-900b0e781fc1" />
+  <Project Path="Gramatica/Gramatica.csproj" Id="01cfb71a-540e-4efd-a0a6-a75ebabfa4c2" />
+  <Project Path="InstruccionesdeSeleccionIfElse/InstruccionesdeSeleccionIfElse.csproj" Id="cc857bfe-5882-439a-be7f-2127eebc3ab9" />
+  <Project Path="MetodosFunciones/MetodosFunciones.csproj" Id="55ab0211-f579-4684-9701-13e23e974ddc" />
+  <Project Path="Proyectos/Proyectos.csproj" Id="28fa4031-4317-4707-99d3-1b65dea85f21" />
 </Solution>
