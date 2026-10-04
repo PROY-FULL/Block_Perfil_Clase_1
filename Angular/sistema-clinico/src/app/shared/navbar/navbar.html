@@ -20,6 +20,10 @@
           <mat-icon matListItemIcon>home</mat-icon>
           <span class="text-white" matListItemTitle>Inicio</span>
         </a>
+        <a mat-list-item routerLink="doctores">
+          <mat-icon matListItemIcon>medical_services</mat-icon>
+          <span class="text-white" matListItemTitle>Doctores</span>
+        </a>
         <a mat-list-item routerLink="pacientes">
           <mat-icon matListItemIcon>groups</mat-icon>
           <span class="text-white" matListItemTitle>Pacientes</span>
@@ -32,7 +36,7 @@
     </mat-sidenav>
 
     <mat-sidenav-content class="app-sidenav-content">
-      <div>
+      <div class="container">
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>

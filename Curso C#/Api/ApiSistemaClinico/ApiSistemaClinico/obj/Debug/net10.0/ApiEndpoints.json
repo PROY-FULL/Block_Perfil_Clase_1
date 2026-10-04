@@ -10,6 +10,75 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ApiSistemaClinico.Controllers.DoctoresController",
+    "Method": "insertDoctores",
+    "RelativePath": "api/Doctores",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dataDoctor",
+        "Type": "ApiSistemaClinico.Models.Doctores",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiSistemaClinico.Controllers.DoctoresController",
+    "Method": "getDoctorId",
+    "RelativePath": "api/Doctores/{IdDoctor}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdDoctor",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiSistemaClinico.Controllers.DoctoresController",
+    "Method": "updateDoctores",
+    "RelativePath": "api/Doctores/{IdDoctor}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdDoctor",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dataDoctor",
+        "Type": "ApiSistemaClinico.Models.Doctores",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiSistemaClinico.Controllers.DoctoresController",
+    "Method": "deleteDoctores",
+    "RelativePath": "api/Doctores/{IdDoctor}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdDoctor",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ApiSistemaClinico.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

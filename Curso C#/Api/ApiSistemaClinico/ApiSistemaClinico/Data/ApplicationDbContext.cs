@@ -11,6 +11,7 @@ namespace ApiSistemaClinico.Data
         }
 
         public DbSet<Doctores> Doctores { get; set; }
+        public DbSet<Pacientes> Pacientes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
