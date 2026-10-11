@@ -79,6 +79,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ApiSistemaClinico.Controllers.EspecialidadesController",
+    "Method": "getEspecialidades",
+    "RelativePath": "api/Especialidades",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ApiSistemaClinico.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

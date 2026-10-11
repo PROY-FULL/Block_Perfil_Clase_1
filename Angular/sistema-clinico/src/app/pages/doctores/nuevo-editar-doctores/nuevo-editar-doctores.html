@@ -1,0 +1,80 @@
+<mat-toolbar>
+  <span>{{ titulo }}</span>
+  <span class="example-spacer"></span>
+
+  <button matIconButton class="example-icon" (click)="closeDialog()">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="formdoctor">
+  <form [formGroup]="doctorForm" (ngSubmit)="guardar()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre Medico</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        formControlName="Nombre"
+        placeholder="Escribre le Mombre del Medico"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Apellido Paterno</label>
+      <input
+        type="text"
+        class="form-control"
+        id="apellidoPaterno"
+        formControlName="ApellidoPaterno"
+        placeholder="Apellido Paterno"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Apellido Materno</label>
+      <input
+        type="text"
+        class="form-control"
+        id="apellidoMaterno"
+        formControlName="ApellidoMaterno"
+        placeholder="Apellido Materno"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Cedula Profecional</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cedulaProfesional"
+        formControlName="CedulaProfesional"
+        placeholder="Cedula Profecional"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Telefono</label>
+      <input
+        type="text"
+        class="form-control"
+        id="telefono"
+        formControlName="Telefono"
+        placeholder="Telefono"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Especialidades</label>
+      <select
+        class="form-select"
+        aria-label="Default select example"
+        formControlName="IdEspecialidad"
+      >
+        <option selected>Selecciona una especialidad</option>
+        @for (especialidad of Especialidades; track especialidad.idEspecialidad) {
+          <option value="{{ especialidad.idEspecialidad }}">
+            {{ especialidad.nombreEspecialidad }}
+          </option>
+        }
+      </select>
+    </div>
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+    </div>
+  </form>
+</div>

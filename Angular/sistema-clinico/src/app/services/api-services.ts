@@ -10,4 +10,12 @@ export class ApiServices {
   get(url: string): Observable<any> {
     return this.http.get(this.apiurl + url)
   }
+
+  put(url: string, body: any): Observable<any> {
+    return this.http.put(this.apiurl + url, body)
+  }
+
+  post(url: string, body: any): Observable<any> {
+    return this.http.post(this.apiurl + url, body)
+  }
 }

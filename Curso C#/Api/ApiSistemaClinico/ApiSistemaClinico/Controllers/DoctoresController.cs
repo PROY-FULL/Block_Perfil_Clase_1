@@ -1,4 +1,5 @@
 ﻿using ApiSistemaClinico.Data;
+using ApiSistemaClinico.DTOs;
 using ApiSistemaClinico.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +24,17 @@ namespace ApiSistemaClinico.Controllers
             {
                 var doctores = _context.Doctores.ToList();
 
-                return Ok(doctores);
+                var doctorDTO = doctores.Select(x=> new DoctoresDTOs
+                {
+                    IdDoctor = x.IdDoctor,
+                    Nombre = x.Nombre,
+                    ApellidoPaterno=x.ApellidoPaterno,
+                    ApellidoMaterno = x.ApellidoMaterno,
+                    CedulaProfesional = x.CedulaProfesional,
+                    Telefono = x.Telefono
+                }).ToList();
+
+                return Ok(doctorDTO);
 
             }
             catch (Exception ex)
@@ -64,7 +75,7 @@ namespace ApiSistemaClinico.Controllers
                     _context.Doctores.Add(dataDoctor);
                     await _context.SaveChangesAsync();
 
-                    return Ok("El registro fue exitoso");
+                    return Ok(doctor);
                 }
                 else
                 {
@@ -90,12 +101,17 @@ namespace ApiSistemaClinico.Controllers
                 if(doctor_existe != null)
                 {
                     doctor_existe.Nombre = dataDoctor.Nombre;
-                    
+                    doctor_existe.ApellidoPaterno = dataDoctor.ApellidoPaterno;
+                    doctor_existe.ApellidoMaterno = dataDoctor.ApellidoMaterno;
+                    doctor_existe.CedulaProfesional = dataDoctor.CedulaProfesional;
+                    doctor_existe.Telefono = dataDoctor.Telefono;
+                    doctor_existe.IdEspecialidad = dataDoctor.IdEspecialidad;
+
                     _context.Entry(doctor_existe).State = EntityState.Modified;
 
                     _context.SaveChangesAsync();
 
-                    return Ok("El doctor fue acualizado");
+                    return Ok(doctor_existe);
 
                 }
                 else

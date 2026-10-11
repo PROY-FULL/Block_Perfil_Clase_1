@@ -152,6 +152,18 @@
         }
       }
     },
+    "/api/Especialidades": {
+      "get": {
+        "tags": [
+          "Especialidades"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -274,6 +286,9 @@
   "tags": [
     {
       "name": "Doctores"
+    },
+    {
+      "name": "Especialidades"
     },
     {
       "name": "WeatherForecast"

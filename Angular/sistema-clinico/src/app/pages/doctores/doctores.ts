@@ -1,70 +1,40 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, inject, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ApiServices } from '../../services/api-services';
-
-export interface UserData {
-  id: string;
-  name: string;
-  progress: string;
-  fruit: string;
-}
-
-/** Constants used to fill up our data base. */
-const FRUITS: string[] = [
-  'blueberry',
-  'lychee',
-  'kiwi',
-  'mango',
-  'peach',
-  'lime',
-  'pomegranate',
-  'pineapple',
-];
-const NAMES: string[] = [
-  'Maia',
-  'Asher',
-  'Olivia',
-  'Atticus',
-  'Amelia',
-  'Jack',
-  'Charlotte',
-  'Theodore',
-  'Isla',
-  'Oliver',
-  'Isabella',
-  'Jasper',
-  'Cora',
-  'Levi',
-  'Violet',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
-];
+import { IDoctores } from '../../Models/Doctores';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { NuevoEditarDoctores } from './nuevo-editar-doctores/nuevo-editar-doctores';
 
 @Component({
   selector: 'app-doctores',
-  imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule],
+  imports: [
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatDialogModule],
   templateUrl: './doctores.html',
   styleUrl: './doctores.css',
 })
 export class Doctores implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
-  dataSource!: MatTableDataSource<UserData>;
+
+  Doctores: IDoctores[] = [];
+  displayedColumns: string[] = ['acciones', 'idDoctor', 'nombre', 'apellidoPaterno', 'apellidoMaterno', 'cedulaProfesional', 'telefono'];
+  dataSource: MatTableDataSource<IDoctores> = new MatTableDataSource();
+  dialog = inject(MatDialog);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private apiService: ApiServices) {
-    // Create 100 users
-    const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
 
-    // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
   }
 
   ngOnInit() {
@@ -73,8 +43,12 @@ export class Doctores implements AfterViewInit {
 
   cargarDatos() {
     this.apiService.get('/Doctores').subscribe({
-      next: (response: any) => {
-        console.log(response);
+      next: (response: IDoctores[]) => {
+
+        this.Doctores = response;
+
+        this.dataSource.data = this.Doctores;
+        console.log(this.Doctores);
       }
 
     })
@@ -93,19 +67,31 @@ export class Doctores implements AfterViewInit {
       this.dataSource.paginator.firstPage();
     }
   }
-}
-/** Builds and returns a new User. */
-function createNewUser(id: number): UserData {
-  const name =
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
-    ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
-    '.';
+  openDialogEditar(doctor: any) {
+    const dialogRef = this.dialog.open(NuevoEditarDoctores, {
+      data: { tipo: "Editar Doctor", result: doctor },
+      minWidth: '50%',
+      minHeight: '70%',
+      disableClose: true,
+      panelClass: 'custom-dialog-container'
+    });
 
-  return {
-    id: id.toString(),
-    name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-  };
+    dialogRef.afterClosed().subscribe(result => {
+      this.cargarDatos();
+    })
+  }
+
+  openDialogNuevo() {
+    const dialogRef = this.dialog.open(NuevoEditarDoctores, {
+      data: { tipo: "Nuevo Doctor" },
+      minWidth: '50%',
+      minHeight: '70%',
+      disableClose: true,
+      panelClass: 'custom-dialog-container'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.cargarDatos();
+    })
+  }
 }

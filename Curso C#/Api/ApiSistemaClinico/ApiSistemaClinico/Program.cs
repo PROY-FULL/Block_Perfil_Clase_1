@@ -1,4 +1,6 @@
 using ApiSistemaClinico.Data;
+using ApiSistemaClinico.Interfaz;
+using ApiSistemaClinico.Servicios;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +28,8 @@ builder.Services.AddCors(options =>
     });
 
 });
+
+builder.Services.AddScoped<IEspecialidades, ServicesEspecialidades>();
 
 var app = builder.Build();
 
