@@ -164,6 +164,18 @@
         }
       }
     },
+    "/api/Pacientes": {
+      "get": {
+        "tags": [
+          "Pacientes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -289,6 +301,9 @@
     },
     {
       "name": "Especialidades"
+    },
+    {
+      "name": "Pacientes"
     },
     {
       "name": "WeatherForecast"

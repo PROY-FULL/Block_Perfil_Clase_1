@@ -68,6 +68,7 @@ export class Doctores implements AfterViewInit {
     }
   }
   openDialogEditar(doctor: any) {
+    console.log(doctor)
     const dialogRef = this.dialog.open(NuevoEditarDoctores, {
       data: { tipo: "Editar Doctor", result: doctor },
       minWidth: '50%',

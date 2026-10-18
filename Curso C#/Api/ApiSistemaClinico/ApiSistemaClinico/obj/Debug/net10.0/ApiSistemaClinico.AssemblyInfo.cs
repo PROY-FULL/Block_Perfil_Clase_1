@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiSistemaClinico")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c072131ddeed9dbe6729dfb77d8c07be75ec2b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d12914040ade3572c53cd76e9c62ea6b87c3fa92")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiSistemaClinico")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiSistemaClinico")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

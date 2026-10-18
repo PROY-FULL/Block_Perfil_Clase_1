@@ -8,5 +8,7 @@
         public string ApellidoMaterno { get; set; }
         public string CedulaProfesional { get; set; }
         public string Telefono { get; set; }
+        public int IdEspecialidad { get; set; }
+        public int IdUsuario { get; set; }
     }
 }

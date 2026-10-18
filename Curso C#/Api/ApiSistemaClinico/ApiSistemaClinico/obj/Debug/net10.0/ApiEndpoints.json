@@ -89,6 +89,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ApiSistemaClinico.Controllers.PacientesController",
+    "Method": "getPacientes",
+    "RelativePath": "api/Pacientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ApiSistemaClinico.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

@@ -15,11 +15,3 @@ th {
 .borders {
   padding: 20px;
 }
-
-.btn_editar {
-  border: none;
-  background-color: transparent;
-}
-.icon_edit {
-  color: blue !important;
-}

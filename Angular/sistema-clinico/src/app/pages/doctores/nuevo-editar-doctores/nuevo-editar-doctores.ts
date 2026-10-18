@@ -38,7 +38,7 @@ export class NuevoEditarDoctores {
 
   ngOnInit(): void {
     this.titulo = this.data.tipo;
-
+    this.cargarCatalogos();
     if (this.titulo == "Editar Doctor") {
       const datosDoctor = {
         IdDoctor: this.data.result.idDoctor,
@@ -47,12 +47,15 @@ export class NuevoEditarDoctores {
         ApellidoMaterno: this.data.result.apellidoMaterno,
         CedulaProfesional: this.data.result.cedulaProfesional,
         Telefono: this.data.result.telefono,
+        IdEspecialidad: this.data.result.IdEs
       };
 
       this.doctorForm.patchValue(datosDoctor);
+
+
     }
 
-    this.cargarCatalogos();
+
   }
   cargarCatalogos() {
     this.apiService.get('/Especialidades').subscribe({
@@ -63,7 +66,7 @@ export class NuevoEditarDoctores {
       error: (error: any) => {
         console.log('error api', error)
       }
-    })
+    });
 
   }
   guardar() {

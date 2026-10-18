@@ -10,3 +10,10 @@
 mat-icon {
   color: white !important;
 }
+.btn_editar {
+  border: none;
+  background-color: transparent;
+}
+.icon_edit {
+  color: blue !important;
+}
