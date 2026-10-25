@@ -174,6 +174,36 @@
             "description": "OK"
           }
         }
+      },
+      "post": {
+        "tags": [
+          "Pacientes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pacientes"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pacientes"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Pacientes"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/WeatherForecast": {
@@ -259,6 +289,57 @@
           },
           "telefono": {
             "type": "string"
+          }
+        }
+      },
+      "Pacientes": {
+        "type": "object",
+        "properties": {
+          "idPaciente": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "apellidoPaterno": {
+            "type": "string"
+          },
+          "apellidoMaterno": {
+            "type": "string"
+          },
+          "fechaNacimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "telefono": {
+            "type": "string"
+          },
+          "genero": {
+            "type": "string"
+          },
+          "direccion": {
+            "type": "string"
+          },
+          "tipoSangre": {
+            "type": "string"
+          },
+          "contactoEmergenciaNombre": {
+            "type": "string"
+          },
+          "contactoEmergenciaTelefono": {
+            "type": "string"
+          },
+          "fechaRegistro": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time"
           }
         }
       },

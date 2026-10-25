@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, inject, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -7,17 +7,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { IPacientes } from '../../Models/Pacientes';
 import { ApiServices } from '../../services/api-services';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialog } from '@angular/material/dialog';
+import { NuevoEditarPacientes } from './nuevo-editar-pacientes/nuevo-editar-pacientes';
 
 @Component({
   selector: 'app-pacientes',
-  imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule],
+  imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule, MatIconModule, MatIconModule],
   templateUrl: './pacientes.html',
   styleUrl: './pacientes.css',
 })
 export class Pacientes implements AfterViewInit {
 
   Pacientes: IPacientes[] = [];
-
+  readonly dialog = inject(MatDialog);
   displayedColumns: string[] = ['acciones', 'idPaciente', 'nombreCompleto', 'nombre', 'apellidoPaterno', 'apellidoMaterno', 'telefono'];
   dataSource: MatTableDataSource<IPacientes> = new MatTableDataSource()
 
@@ -64,6 +66,22 @@ export class Pacientes implements AfterViewInit {
   openDialog(paciente: any) {
     throw new Error('Method not implemented.');
   }
+
+  openDialogNuevo() {
+    const dialogRef = this.dialog.open(NuevoEditarPacientes, {
+      data: { tipo: 'Nuevo Doctor' },
+      minWidth: '90%',
+      minHeight: '85%',
+      disableClose: true,
+      panelClass: 'custom-dialog-container'
+
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.CargarDatos();
+    });
+  }
+
 }
 
 

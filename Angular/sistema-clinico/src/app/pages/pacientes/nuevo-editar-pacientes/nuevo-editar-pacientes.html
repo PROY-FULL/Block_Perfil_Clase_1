@@ -1,0 +1,166 @@
+<mat-toolbar>
+  <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>medication</mat-icon>
+  </button>
+  <span>{{ titulo }}</span>
+  <span class="spacer"></span>
+  <button
+    matIconButton
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    (click)="closeDialog()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography"> </mat-dialog-content>
+<div class="container">
+  <form [formGroup]="pacienteForm" (ngSubmit)="NuevoEditar()">
+    <div class="row">
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input
+            formControlName="Nombre"
+            type="text"
+            class="form-control"
+            id="nombre"
+            placeholder="Nombre del Paciente"
+          />
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="apellidoPaterno" class="form-label">Apellido Paterno</label>
+          <input
+            formControlName="ApellidoPaterno"
+            type="text"
+            class="form-control"
+            id="apellidoPaterno"
+            placeholder="Apellido Paterno"
+          />
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="apellidoMaterno" class="form-label">Apellido Materno</label>
+          <input
+            formControlName="ApellidoMaterno"
+            type="text"
+            class="form-control"
+            id="apellidoMaterno"
+            placeholder="Nombre del Paciente"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="fechaNacimiento" class="form-label">Fecha Nacimiento</label>
+          <input
+            formControlName="FechaNacimiento"
+            type="date"
+            class="form-control"
+            id="fechaNacimiento"
+            placeholder="Fecha Nacimiento"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="genero" class="form-label">Genero</label>
+          <select formControlName="Genero" class="form-select" aria-label="Default select example">
+            <option selected>-- Selecciona--</option>
+            <option value="M">Masculino(M)</option>
+            <option value="F">Femenino(F)</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Telefono</label>
+          <input
+            formControlName="Telefono"
+            type="text"
+            class="form-control"
+            id="telefono"
+            placeholder="Telefono del Paciente"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="genero" class="form-label">Tipo de Sangre</label>
+          <select
+            formControlName="TipoSangre"
+            class="form-select"
+            aria-label="Default select example"
+          >
+            <option selected>-- Selecciona--</option>
+            <option value="O+">O+</option>
+            <option value="B+">B+</option>
+            <option value="AB">AB</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="contactoEmergenciaNombre" class="form-label"
+            >Nombre Contacto Emergencia</label
+          >
+          <input
+            formControlName="ContactoEmergenciaNombre"
+            type="text"
+            class="form-control"
+            id="contactoEmergenciaNombre"
+            placeholder="Nombre Contacto Emergencia"
+          />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="mb-3">
+          <label for="contactoEmergenciaTelefono" class="form-label">Telefono de Emergencia</label>
+          <input
+            formControlName="ContactoEmergenciaTelefono"
+            type="text"
+            class="form-control"
+            id="contactoEmergenciaTelefono"
+            placeholder="Telefono de Emergencia"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-3">
+          <label for="direccion" class="form-label">Dirección</label>
+          <textarea
+            formControlName="Direccion"
+            class="form-control"
+            id="direccion"
+            rows="3"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<mat-dialog-actions align="end">
+  <button matButton mat-dialog-close>Cancelar</button>
+</mat-dialog-actions>

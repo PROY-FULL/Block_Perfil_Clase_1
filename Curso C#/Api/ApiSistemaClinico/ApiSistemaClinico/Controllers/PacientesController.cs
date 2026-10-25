@@ -1,5 +1,7 @@
 ﻿using ApiSistemaClinico.Data;
 using ApiSistemaClinico.Interfaz;
+using ApiSistemaClinico.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiSistemaClinico.Controllers
@@ -24,6 +26,18 @@ namespace ApiSistemaClinico.Controllers
 
             return BadRequest("Ocurrio un error al cargar los datos del listado de doctores");
 
+        }
+        [HttpPost]
+        public async Task<IActionResult> insertarPaciente(Pacientes pacientes)
+        {
+            int result = await _pacientes.RegistrarPaciente(pacientes);
+
+            if(result == 0)
+            {
+                BadRequest("Error el pacientes ya esta registrado!!");
+            }
+
+            return Ok(result);
         }
     }
 }

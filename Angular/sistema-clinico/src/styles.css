@@ -17,3 +17,18 @@ mat-icon {
 .icon_edit {
   color: blue !important;
 }
+
+.btn-icon-nuevo {
+  background-color: blue;
+  border: 1px solid blue;
+  cursor: pointer;
+}
+
+.icon_new {
+  color: white !important;
+  font-size: 30px;
+}
+
+.span-titulo {
+  margin-left: 10px;
+}

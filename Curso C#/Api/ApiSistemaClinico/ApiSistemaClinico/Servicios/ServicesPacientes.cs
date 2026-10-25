@@ -1,6 +1,7 @@
 ﻿using ApiSistemaClinico.Data;
 using ApiSistemaClinico.DTOs;
 using ApiSistemaClinico.Interfaz;
+using ApiSistemaClinico.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiSistemaClinico.Servicios
@@ -44,6 +45,25 @@ namespace ApiSistemaClinico.Servicios
             {
                 return null;
             }
+        }
+
+        public async Task<int> RegistrarPaciente(Pacientes pacientes)
+        {
+            var paciente_existe = _context.Pacientes.Where(
+                                    x => x.Nombre == pacientes.Nombre
+                                    && x.ApellidoPaterno == pacientes.ApellidoPaterno
+                                    && x.ApellidoMaterno == pacientes.ApellidoMaterno)
+                                    .FirstOrDefault();
+            if(paciente_existe == null)
+            {
+                pacientes.FechaRegistro = DateTime.Now;
+                _context.Pacientes.Add(pacientes);
+                await _context.SaveChangesAsync();
+
+                return pacientes.IdPaciente;
+            }
+
+            return 0;
         }
     }
 }

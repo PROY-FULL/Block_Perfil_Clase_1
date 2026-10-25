@@ -43,7 +43,7 @@ export class Doctores implements AfterViewInit {
 
   cargarDatos() {
     this.apiService.get('/Doctores').subscribe({
-      next: (response: IDoctores[]) => {
+      next: (response: any[]) => {
 
         this.Doctores = response;
 
