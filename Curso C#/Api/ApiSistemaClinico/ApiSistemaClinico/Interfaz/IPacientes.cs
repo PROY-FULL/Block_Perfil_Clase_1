@@ -7,5 +7,8 @@ namespace ApiSistemaClinico.Interfaz
     {
         Task<List<PacientesDTOs>> getPacientes();
         Task<int> RegistrarPaciente(Pacientes pacientes);
+        Task<List<PacientesBuscarDTOs>> BuscarPaciente(string texto);
+
+
     }
 }

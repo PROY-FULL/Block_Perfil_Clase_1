@@ -32,6 +32,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<IEspecialidades, ServicesEspecialidades>();
 builder.Services.AddScoped<IDoctores, ServicesDoctores>();
 builder.Services.AddScoped<IPacientes, ServicesPacientes>();
+builder.Services.AddScoped<ICitas, CitasServices>();
 
 var app = builder.Build();
 

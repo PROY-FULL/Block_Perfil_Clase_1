@@ -27,6 +27,13 @@ namespace ApiSistemaClinico.Controllers
             return BadRequest("Ocurrio un error al cargar los datos del listado de doctores");
 
         }
+        [HttpGet("buscar-pacientes")]
+        public async Task<IActionResult> buscarPacientes([FromQuery] string texto)
+        {
+            var result = await _pacientes.BuscarPaciente(texto);
+            return Ok(result);
+        }
+
         [HttpPost]
         public async Task<IActionResult> insertarPaciente(Pacientes pacientes)
         {

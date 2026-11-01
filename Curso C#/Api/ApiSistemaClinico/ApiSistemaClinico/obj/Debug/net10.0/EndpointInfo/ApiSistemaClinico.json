@@ -13,6 +13,18 @@
     }
   ],
   "paths": {
+    "/api/Citas": {
+      "get": {
+        "tags": [
+          "Citas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Doctores": {
       "get": {
         "tags": [
@@ -206,6 +218,27 @@
         }
       }
     },
+    "/api/Pacientes/buscar-pacientes": {
+      "get": {
+        "tags": [
+          "Pacientes"
+        ],
+        "parameters": [
+          {
+            "name": "texto",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -248,6 +281,51 @@
   },
   "components": {
     "schemas": {
+      "Citas": {
+        "type": "object",
+        "properties": {
+          "idCita": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "idPaciente": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "idDoctor": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "fechaHoraCita": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estado": {
+            "type": "string"
+          },
+          "motivoConsulta": {
+            "type": "string"
+          },
+          "doctores": {
+            "$ref": "#/components/schemas/Doctores"
+          },
+          "pacientes": {
+            "$ref": "#/components/schemas/Pacientes"
+          }
+        }
+      },
       "Doctores": {
         "type": "object",
         "properties": {
@@ -289,6 +367,12 @@
           },
           "telefono": {
             "type": "string"
+          },
+          "citas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Citas"
+            }
           }
         }
       },
@@ -340,6 +424,12 @@
               "string"
             ],
             "format": "date-time"
+          },
+          "citas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Citas"
+            }
           }
         }
       },
@@ -377,6 +467,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Citas"
+    },
     {
       "name": "Doctores"
     },

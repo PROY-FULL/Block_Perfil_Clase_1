@@ -18,5 +18,7 @@ namespace ApiSistemaClinico.Models
         public string ContactoEmergenciaTelefono { get; set; }
         public DateTime? FechaRegistro { get; set; }
 
+        public ICollection<Citas> Citas { get; set; }
+
     }
 }

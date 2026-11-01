@@ -56,7 +56,7 @@ export class NuevoEditarPacientes {
   }
 
   NuevoEditar() {
-    console.log(this.pacienteForm.value);
+
     this.apiService.post('/Pacientes', this.pacienteForm.value).subscribe({
       next: (res) => {
         console.log('registro creado');

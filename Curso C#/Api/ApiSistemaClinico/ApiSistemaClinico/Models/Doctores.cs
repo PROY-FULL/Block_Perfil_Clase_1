@@ -14,5 +14,6 @@ namespace ApiSistemaClinico.Models
         public string CedulaProfesional { get; set; }
         public string Telefono { get; set; }
 
+        public ICollection<Citas> Citas { get; set; }
     }
 }

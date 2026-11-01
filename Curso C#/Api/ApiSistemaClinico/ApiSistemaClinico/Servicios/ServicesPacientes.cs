@@ -3,6 +3,7 @@ using ApiSistemaClinico.DTOs;
 using ApiSistemaClinico.Interfaz;
 using ApiSistemaClinico.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ApiSistemaClinico.Servicios
 {
@@ -13,6 +14,22 @@ namespace ApiSistemaClinico.Servicios
         public ServicesPacientes(ApplicationDbContext context)
         {
             _context = context;
+        }
+
+        public async Task<List<PacientesBuscarDTOs>> BuscarPaciente(string texto)
+       {
+            var pacientes = await _context.Pacientes.Where
+            (p => (p.Nombre != null && p.Nombre.ToLower().Contains(texto.ToLower())) ||
+            (p.ApellidoPaterno != null && p.ApellidoPaterno.ToLower().Contains(texto.ToLower())) ||
+            (p.ApellidoMaterno != null && p.ApellidoMaterno.ToLower().Contains(texto.ToLower()))).ToListAsync();
+
+            var pacientesFiltro = pacientes.Select(pb => new PacientesBuscarDTOs
+            {
+                IdPaciente = pb.IdPaciente,
+                NombreCompleto = pb.Nombre + " " + pb.ApellidoPaterno + " " + pb.ApellidoMaterno
+            }).ToList();
+
+            return pacientesFiltro;
         }
 
         public async Task<List<PacientesDTOs>> getPacientes()

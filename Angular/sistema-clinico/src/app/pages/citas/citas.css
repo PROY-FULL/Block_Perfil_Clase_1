@@ -1,0 +1,15 @@
+table {
+  width: 100%;
+}
+
+.container-acciones {
+  width: 2% !important;
+}
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.new-container {
+  padding: 20px;
+}

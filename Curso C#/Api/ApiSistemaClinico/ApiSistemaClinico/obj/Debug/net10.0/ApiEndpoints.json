@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "ApiSistemaClinico.Controllers.CitasController",
+    "Method": "getCitas",
+    "RelativePath": "api/Citas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ApiSistemaClinico.Controllers.DoctoresController",
     "Method": "getDoctores",
     "RelativePath": "api/Doctores",
@@ -110,6 +120,22 @@
         "Name": "pacientes",
         "Type": "ApiSistemaClinico.Models.Pacientes",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiSistemaClinico.Controllers.PacientesController",
+    "Method": "buscarPacientes",
+    "RelativePath": "api/Pacientes/buscar-pacientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "texto",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
