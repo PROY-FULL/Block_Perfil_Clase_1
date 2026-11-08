@@ -12,5 +12,8 @@ namespace ApiSistemaClinico.Interfaz
         Task<int> updateDoctores(int IdDoctor, Doctores dataDoctor);
 
         Task<int> deleteDoctores(int IdDoctor);
+        Task<List<BuscarDoctoresDTOs>> BuscarDoctores(string texto);
+
+
     }
 }

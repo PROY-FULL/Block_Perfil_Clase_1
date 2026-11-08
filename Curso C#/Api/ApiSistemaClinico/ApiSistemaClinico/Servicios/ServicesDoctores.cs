@@ -154,5 +154,30 @@ namespace ApiSistemaClinico.Servicios
             }
         }
 
+        public async Task<List<BuscarDoctoresDTOs>> BuscarDoctores(string texto)
+        {
+            try
+            {
+                var doctor = await _context.Doctores
+                    .Where(d=> 
+                    (d.Nombre != null && d.Nombre.ToLower().Contains(texto)) ||
+                    (d.ApellidoPaterno != null && d.ApellidoPaterno.ToLower().Contains(texto)) ||
+                    (d.ApellidoMaterno != null && d.ApellidoMaterno.ToLower().Contains(texto))).ToListAsync();
+
+                var doctorFiltro = doctor.Select(f => new BuscarDoctoresDTOs
+                {
+                    idDoctor = f.IdDoctor,
+                    NombreCompleto = f.Nombre + " " + f.ApellidoPaterno + " " + f.ApellidoMaterno
+                }).ToList();
+
+                return doctorFiltro;
+
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Hubo un error al realizar la busqueda de doctores");
+            }
+            
+        }
     }
 }

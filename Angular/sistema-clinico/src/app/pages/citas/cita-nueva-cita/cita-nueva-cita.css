@@ -1,0 +1,14 @@
+::ng-deep .fecha-ocupada .mat-calendar-body-cell-content {
+  background-color: #f44336 !important;
+  border-radius: 100%;
+}
+
+::ng-deep .fecha-libre .mat-calendar-body-cell-content {
+  background-color: #31ab1e !important;
+  color: white !important;
+  border-radius: 100%;
+}
+
+.matfiel-with {
+  width: 100%;
+}

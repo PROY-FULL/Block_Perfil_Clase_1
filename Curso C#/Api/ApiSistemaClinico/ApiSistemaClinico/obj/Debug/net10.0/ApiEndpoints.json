@@ -10,6 +10,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ApiSistemaClinico.Controllers.CitasController",
+    "Method": "getTotalCitas",
+    "RelativePath": "api/Citas/totalcitas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ApiSistemaClinico.Controllers.DoctoresController",
     "Method": "getDoctores",
     "RelativePath": "api/Doctores",
@@ -84,6 +94,22 @@
         "Name": "IdDoctor",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiSistemaClinico.Controllers.DoctoresController",
+    "Method": "buscarDoctores",
+    "RelativePath": "api/Doctores/buscar-doctores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "texto",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

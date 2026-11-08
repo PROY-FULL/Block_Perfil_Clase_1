@@ -25,6 +25,18 @@
         }
       }
     },
+    "/api/Citas/totalcitas": {
+      "get": {
+        "tags": [
+          "Citas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Doctores": {
       "get": {
         "tags": [
@@ -154,6 +166,27 @@
                 "string"
               ],
               "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Doctores/buscar-doctores": {
+      "get": {
+        "tags": [
+          "Doctores"
+        ],
+        "parameters": [
+          {
+            "name": "texto",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
           }
         ],

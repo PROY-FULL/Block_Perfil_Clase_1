@@ -79,5 +79,15 @@ namespace ApiSistemaClinico.Controllers
 
             return Ok("El Doctor No." + result + " Fue eliminado Exitosamente..!!");
         }
+
+        [HttpGet("buscar-doctores")] 
+        public async Task<IActionResult> buscarDoctores([FromQuery] string texto)
+        {
+            var result = await _doctores.BuscarDoctores(texto);
+            return Ok(result);
+
+        }
+
+
     }
 }

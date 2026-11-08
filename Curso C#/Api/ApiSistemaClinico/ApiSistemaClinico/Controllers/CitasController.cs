@@ -20,5 +20,12 @@ namespace ApiSistemaClinico.Controllers
             var result = await _citas.getCitas();
             return Ok(result);
         }
+
+        [HttpGet("totalcitas")]
+        public async Task<IActionResult> getTotalCitas()
+        {
+            var result = await _citas.getTotalCitas();
+            return Ok(result);
+        }
     }
 }

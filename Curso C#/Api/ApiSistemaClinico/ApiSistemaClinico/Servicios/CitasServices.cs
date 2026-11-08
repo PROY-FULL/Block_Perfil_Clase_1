@@ -36,5 +36,29 @@ namespace ApiSistemaClinico.Servicios
                 throw new Exception(ex.Message);
             }
         }
+
+        public async Task<List<CitasPendientesDTOs>> getTotalCitas()
+        {
+            try
+            {
+                var resultado = await _context.Citas
+                    .Where(c => c.FechaHoraCita != null)//filtro opcional para validar si hay datos nullos
+                    .GroupBy(c => c.FechaHoraCita.Date) // Agrupamos ignorando la hora solo por la fecha (YYYY-MM-DD)
+                    .Select(grupo => new CitasPendientesDTOs
+                    {
+                        FechaCita = grupo.Key, // la fecha del grupo
+                        totalCita = grupo.Count() // El conteop total de registros en esa fecha
+                    })
+                    .OrderBy(x => x.FechaCita)
+                    .ToListAsync();
+
+                return resultado;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
     }
 }
